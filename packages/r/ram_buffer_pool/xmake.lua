@@ -1,0 +1,8 @@
+package("ram_buffer_pool")
+    add_urls("git@github.com:mcvlab/ram_buffer_pool.git")
+    add_versions("v0.1.0", "ab36d47")
+    -- add_deps("libc")
+    on_install(function (package)
+        os.cp("src/*.h", package:installdir("include/ram_buffer_pool"))
+        import("package.tools.xmake").install(package)
+    end)

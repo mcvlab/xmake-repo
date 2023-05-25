@@ -1,0 +1,8 @@
+package("graph_engine")
+    add_urls("git@github.com:mcvlab/graph_engine.git")
+    add_versions("v1.3", "6b20fc3")
+    -- add_deps("libc")
+    on_install(function (package)
+        os.cp("src/*.h", package:installdir("include/graph_engine"))
+        import("package.tools.xmake").install(package)
+    end)
