@@ -1,0 +1,7 @@
+package("simple_config")
+    set_version("v0.0.1")
+    set_urls("git@github.com:mcvlab/simple_config.git")
+    -- add_deps("libc")
+    on_install(function (package)
+        import("package.tools.xmake").install(package)
+    end)
