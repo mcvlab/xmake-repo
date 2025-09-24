@@ -1,5 +1,7 @@
 # xmake-repo
 
+*** 废弃：改用 Conan ***
+
 管理自建xmake项目依赖的package索引，私有package居多，陌生人慎重引用。熟识开发者需要对应package可以申请权限
 
 ## 使用方式
